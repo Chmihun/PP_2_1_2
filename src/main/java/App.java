@@ -13,5 +13,14 @@ public class App {
                 (Cat) applicationContext.getBean("cat");
         System.out.println(CatBean.getMessage());
 
+        HelloWorld bean1 = applicationContext.getBean(HelloWorld.class);
+        HelloWorld bean2 = applicationContext.getBean(HelloWorld.class);
+
+        Cat CatBean1 = applicationContext.getBean(Cat.class);
+        Cat CatBean2 = applicationContext.getBean(Cat.class);
+
+        System.out.println("HelloWorld сравнение ссылок: " +(bean1==bean2));
+        System.out.println("Cat сравнение ссылок: " + (CatBean1==CatBean2));
     }
 }
+
